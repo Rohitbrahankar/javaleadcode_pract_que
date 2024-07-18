@@ -40,8 +40,7 @@ public class findmid {
         n4.next=n5;
         n5.next=n6;
          findmid(n1);
-        //System.out.println(n);
-        //System.out.println(n1.data);
+      
 
 
     }

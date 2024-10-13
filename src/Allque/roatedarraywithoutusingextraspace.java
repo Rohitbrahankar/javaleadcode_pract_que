@@ -11,22 +11,24 @@ public class roatedarraywithoutusingextraspace {
     {
         while (i< j)
         {
-            swap(arr,i, j);
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
             i++;
             j--;
         }
     }
     public static  void roatedk(int arr[] , int k ) {
          int n = arr.length;
-         k= n % k;
-         reverse(arr, 0,n-k-1);
-         print(arr);
+         k= k%n;
+         reverse(arr, 0,n-1);
+        // print(arr);
         System.out.println("------------");
-         reverse(arr,n-k , n-1);
-        print(arr);
+         reverse(arr,0, k-1);
+        //print(arr);
         System.out.println("------------");
-         reverse(arr,0,n-1);
-        print(arr);
+         reverse(arr,k,n-1);
+       // print(arr);
         System.out.println("------------");
 
 
@@ -46,7 +48,7 @@ public class roatedarraywithoutusingextraspace {
         print(arr);
         System.out.println("----------------");
         roatedk(arr, k);
-    //   print(arr);
+    print(arr);
 
 
 

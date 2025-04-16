@@ -5,26 +5,46 @@ import java.util.Stack;
 public class validip {
     public static void main(String[] args) {
         String  s= "0.0.0.255";
-        Stack<Character> st= new Stack<>();
-        char arr[]= s.toCharArray();
-        int n = arr.length;
-        int count=0;
-        for(int i =0;i< n;i++)
-        {
-             if(count==3){
-                 count=0;
-             }
+        String[] parts = s.split("\\."); //['222','111','111','111']
 
-             if( !st.isEmpty() && st.peek()=='.')
-             {
-                 System.out.println("not valid");
-                 return;
-             }
-             st.push(arr[i]);
-
-
-
+        if (parts.length != 4) {
+            return false;
         }
+
+        for (String part : parts) {
+           
+            if (part.length() == 0 || part.length() > 3){
+                System.out.println("False");
+                    return ;
+            }
+
+           
+            for (char ch : part.toCharArray()) {
+                if (!Character.isDigit(ch)) {
+                    System.out.println("False");
+                    return ;
+                }
+            }
+
+            int num = Integer.parseInt(part);
+
+         
+            if (num < 0 || num > 255) {
+
+
+                System.out.println("False");
+                    return ;
+            }
+
+           // check no leading 0 
+            if (part.length() > 1 && part.charAt(0) == '0')
+            {
+               System.out.println("False");
+                    return ;
+            }
+        }
+
+      //  return true;
         System.out.println("valid");
         return;
 

@@ -1,5 +1,7 @@
 package bitwiseoperation;
 
+import java.util.Arrays;
+
 public class find1scomplement {
     private static String find_binary(int n)
     {
@@ -11,6 +13,7 @@ public class find1scomplement {
                 rem += '0';
             }
             n= n/2;
+
 
         }
 
@@ -35,6 +38,7 @@ public class find1scomplement {
             } else {
                 ans[i] = '1';
             }
+            
 
 
 

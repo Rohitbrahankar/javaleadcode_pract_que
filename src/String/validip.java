@@ -50,4 +50,7 @@ public class validip {
 
     }
 }
+<<<<<<< HEAD
 commit
+=======
+>>>>>>> 608a7bf (gfg ques)

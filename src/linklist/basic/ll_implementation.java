@@ -1,4 +1,4 @@
-package linklist;
+package linklist.basic;
 
 public class ll_implementation {
     public static class Node {
@@ -32,7 +32,8 @@ public class ll_implementation {
 
         }
         void  display()
-        {   Node temp= head;
+        {
+            Node temp= head;
             if(head==null) return;
 
             while (temp!=null)
@@ -42,8 +43,10 @@ public class ll_implementation {
             }
 
         }
-           void   dis()
-        {   Node temp= head;
+        void   dis()
+        {
+            Node temp= head;
+
             if(head==null) return;
 
             System.out.print(temp.data+"");

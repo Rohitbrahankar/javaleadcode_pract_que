@@ -3,7 +3,7 @@ package Array;
 public class printallsubarray {
 
     public static void main(String[] args) {
-        int arr[]= {1 ,2 ,3  , 4,5};
+        int arr[]= {6 ,7 ,5 ,9 };
 
         int n = arr.length;
 

@@ -1,4 +1,5 @@
 package DP.Fibonaci;
+//fibonaci with recurtion only 
 
 public class fibnaci {
     static  int fib(int n)
